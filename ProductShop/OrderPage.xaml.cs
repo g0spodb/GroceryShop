@@ -20,12 +20,6 @@ namespace ProductShop
     /// </summary>
     public partial class OrderPage : Page
     {
-        public OrderPage(DateBasee.User user)
-        {
-            InitializeComponent();
-      
-        }
-
         private void btn_back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ListPage(ListPage.user));

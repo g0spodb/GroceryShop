@@ -29,9 +29,8 @@
 
         <Image Source="/img/logo.jpg" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
         <Button x:Name="btn_add" Content="+" Grid.Column="4" Grid.Row="0" Height="50" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Visible" Click="btn_add_Click"/>
-        <!--<Button x:Name="btn_othet" Content="Отчеты" Grid.Column="0" Grid.Row="0" Height="40" Width="120" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-        <Button x:Name="btn_order" Content="Заказ" Grid.Column="0" Grid.Row="0" Height="40" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btn_order_Click"/>-->
-        <Button x:Name="btn_postup" Content="Поступление продуктов" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Height="40" VerticalAlignment="Bottom" Click="btn_postup_Click"/>
+        <Button x:Name="btn_order" Content="СделатьЗаказ" Grid.Row="8" Grid.Column="2" Height="40" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btn_order_Click"/>
+        <Button x:Name="btn_postup" Content="Поступление продуктов" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Height="40" VerticalAlignment="Center" Click="btn_postup_Click"/>
 
         <ListView x:Name="prod" ItemsSource="{Binding products}" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="7" SelectionChanged="prod_SelectionChanged">
             <ListView.View>
@@ -45,7 +44,7 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    
+
                     <GridViewColumn Header="Наименование"  DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Header="Описание"  DisplayMemberBinding="{Binding Description}"/>
                     <GridViewColumn Header="Дата добавления" DisplayMemberBinding="{Binding AddDate}"/>
@@ -68,8 +67,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
-        <TextBox x:Name="tb_search" Grid.Row="0" Grid.Column="3" Height="30" VerticalAlignment="Top" SelectionChanged="tb_search_SelectionChanged" />
+
+        <TextBox x:Name="tb_search" Grid.Row="0" Grid.Column="3" Height="30" VerticalAlignment="Top" TextChanged="tb_search_TextChanged"/>
         <ComboBox Name="cb_unit" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="90" SelectionChanged="cb_unit_SelectionChanged"/>
         <ComboBox Name="cb_alf" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="150" SelectionChanged="cb_unit_SelectionChanged">
             <ComboBoxItem Content="Сбросить"></ComboBoxItem>
@@ -81,7 +80,7 @@
             <ComboBoxItem Content="От старых к новым"/>
             <ComboBoxItem Content="От новых к старым"/>
         </ComboBox>
-        <CheckBox Name="cb_mounth" Content="В этом месяце" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" Click="cb_mounth_Click"/>
+        <CheckBox Name="cb_mounth" Content="В этом месяце" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Click="cb_mounth_Click"/>
 
         <ComboBox Name="cb_count" Grid.Row="8" Grid.Column="0" Width="70" HorizontalAlignment="Left" SelectionChanged="cb_count_SelectionChanged">
             <ComboBoxItem Content="Все"/>

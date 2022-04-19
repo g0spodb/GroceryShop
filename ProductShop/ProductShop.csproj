@@ -151,9 +151,6 @@
     <Compile Include="OrderPage.xaml.cs">
       <DependentUpon>OrderPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OthetPage.xaml.cs">
-      <DependentUpon>OthetPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PostupListPage.xaml.cs">
       <DependentUpon>PostupListPage.xaml</DependentUpon>
     </Compile>
@@ -223,10 +220,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OrderPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="OthetPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

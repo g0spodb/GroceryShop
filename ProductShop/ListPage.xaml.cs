@@ -72,7 +72,7 @@ namespace ProductShop
 
             if (tb_search.Text != "")
             {
-                filterProd = bd_connection.connection.Product.Where(z => (z.Name.Contains(tb_search.Text) || z.Description.Contains(tb_search.Text)));
+                filterProd = filterProd.Where(z => (z.Name.StartsWith(tb_search.Text) || z.Description.StartsWith(tb_search.Text)));
             }
 
             if(cb_unit.SelectedIndex > 0)
@@ -138,7 +138,7 @@ namespace ProductShop
             Filter();
         }
 
-        private void tb_search_SelectionChanged(object sender, RoutedEventArgs e)
+        private void tb_search_TextChanged(object sender, RoutedEventArgs e)
         {
             actualPage = 0;
             Filter();
@@ -177,7 +177,7 @@ namespace ProductShop
 
         private void btn_order_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new OrderPage(user));
+            NavigationService.Navigate(new OrderPage());
         }
 
         private void btn_postup_Click(object sender, RoutedEventArgs e)
